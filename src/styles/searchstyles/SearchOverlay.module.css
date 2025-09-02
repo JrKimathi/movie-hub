@@ -1,0 +1,82 @@
+.overlay {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.overlayContent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 100px;
+    padding: 0 2rem;
+    border-bottom: 2px solid #a1383d;
+    position: relative;
+}
+
+.searchInputWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+.searchIcon {
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+}
+
+.searchInput {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 100%;
+    outline: none;
+    padding: 0.5rem 0;
+}
+
+.searchInput::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.closeBtn:hover {
+    transform: translateY(-50%) rotate(90deg);
+}

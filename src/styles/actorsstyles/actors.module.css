@@ -1,0 +1,107 @@
+.actorsPage {
+    background-color: #000;
+    min-height: 100vh;
+    padding: 100px 2rem 2rem;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.actorsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rowTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.actorsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.actorCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.actorImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #a1383d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.actorImage:hover {
+    transform: scale(1.05);
+}
+
+.actorInfo {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.actorName {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.popularity {
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-bottom: 0.25rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.paginationButton {
+    background-color: transparent;
+    border: 1px solid #a1383d;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.paginationButton:hover:not(:disabled) {
+    background-color: #a1383d;
+    color: #fff;
+}
+
+.paginationButton.active {
+    background-color: #a1383d;
+    color: #fff;
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ellipsis {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+}

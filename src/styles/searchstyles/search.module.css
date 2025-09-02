@@ -1,0 +1,180 @@
+.container {
+    padding: 40px 20px;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+.moviesShowsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.movieShowCard {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.movieShowCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.posterContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.posterImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.posterPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.cardOverlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardYear {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.heartIcon {
+    color: #ff4d4d;
+    transition: transform 0.2s ease;
+}
+
+.movieShowCard:hover .heartIcon {
+    transform: scale(1.2);
+}
+
+.cardInfo {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.cardTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 0 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardRating {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+}
+
+.actorsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.actorCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.actorImageContainer {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #007bff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+}
+
+.actorCard:hover .actorImageContainer {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #007bff;
+}
+
+.actorImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.actorPlaceholder {
+    font-size: 3rem;
+    color: #888;
+}
+
+.actorName {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+.statusMessage {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    padding-top: 50px;
+}

@@ -1,0 +1,76 @@
+.movieCard {
+    position: relative;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.movieCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.posterContainer {
+    position: relative;
+    width: 100%;
+}
+
+.poster {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.yearOverlay {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: #a1383d;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50px;
+}
+
+.favouriteButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #e50914;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.heartIcon {
+    color: #e50914;
+
+}
+
+.info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.25rem;
+}
+
+.releaseYear {
+    color: #888;
+    font-size: 0.875rem;
+}

@@ -1,0 +1,253 @@
+.series {
+    background-color: #000;
+    min-height: 100vh;
+    padding: 100px 2rem 2rem;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.seriesRowContainer {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.rowTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.seriesListWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.seriesList {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.seriesList::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollButton {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.seriesListWrapper:hover .scrollButton {
+    opacity: 1;
+}
+
+.scrollButtonLeft {
+    left: 0.5rem;
+}
+
+.scrollButtonRight {
+    right: 0.5rem;
+}
+
+.seriesCard {
+    position: relative;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.seriesCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.posterContainer {
+    position: relative;
+    width: 100%;
+}
+
+.poster {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.yearOverlay {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: #a1383d;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50px;
+}
+
+.favouriteButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #e50914;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.heartIcon {
+    color: #e50914;
+}
+
+.info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.25rem;
+}
+
+.releaseYear {
+    color: #888;
+    font-size: 0.875rem;
+}
+
+/* Pagination Styles */
+.allSeriesContainer {
+    margin-bottom: 2rem;
+}
+
+.seriesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+
+.paginationButton {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #a1383d;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.paginationButton:hover:not(:disabled) {
+    background-color: #a1383d;
+}
+
+.paginationButton.active {
+    background-color: #a1383d;
+    border-color: #a1383d;
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+/* Pagination Styles */
+.paginationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+    /* Space between buttons */
+}
+
+.paginationItem {
+    background-color: transparent;
+    border: 2px solid #a1383d;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    /* Rounded corners for the buttons */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    min-width: 40px;
+    /* Ensures consistent width */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginationItem.active {
+    background-color: #a1383d;
+    border-color: #a1383d;
+}
+
+.paginationItem:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Hover effect for inactive buttons */
+.paginationItem:hover:not(:disabled):not(.active) {
+    background-color: rgba(161, 56, 61, 0.2);
+}
+
+.paginationEllipsis {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+}
