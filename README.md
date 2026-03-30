@@ -144,15 +144,3 @@ npm test
 
 # or
 yarn test
-
-## Folder Structure
-src/
-├── components/        # Reusable UI components
-├── pages/             # Application pages
-├── styles/            # CSS Modules
-├── utils/             # Recommendation logic
-├── types.ts           # Global TypeScript definitions
-└── Navigator.tsx      # Route configuration
-
-
-
