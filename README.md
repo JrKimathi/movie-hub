@@ -6,7 +6,7 @@ MovieHub is a responsive movie and TV show discovery web application built with 
 
 The application is deployed on Vercel:
 
-https://your-vercel-url.vercel.app
+https://movie-hub-omega-orcin.vercel.app/
 
 Replace the URL above with your actual Vercel deployment link.
 
