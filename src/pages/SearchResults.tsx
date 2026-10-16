@@ -2,8 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import styles from '../styles/searchstyles/search.module.css';
 import Navbar from '../components/Navbar';
+import { API_KEY, BASE_URL } from "../config";
 
-const API_KEY = 'dfac1aa5cb807fcf17cb9a1914e1c132';
+
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
 

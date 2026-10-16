@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_KEY, BASE_URL } from "../config";
 
 interface Series {
   id: number;
@@ -11,8 +12,7 @@ interface Series {
   genre_ids?: number[];
 }
 
-const API_KEY = "dfac1aa5cb807fcf17cb9a1914e1c132";
-const BASE_URL = "https://api.themoviedb.org/3";
+
 
 export async function getSeriesRecommendations(favourites: Series[]): Promise<Series[]> {
   const recommendations = new Map<number, Series>();

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./Navbar";
+import { API_KEY, BASE_URL } from "../config";
 import styles from "../styles/seriesstyles/seriesdetails.module.css";
 
 interface SeriesDetails {
@@ -50,8 +51,6 @@ interface SimilarSeries {
   poster_path: string | null;
 }
 
-const API_KEY = "dfac1aa5cb807fcf17cb9a1914e1c132";
-const BASE_URL = "https://api.themoviedb.org/3";
 
 const SeriesDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();

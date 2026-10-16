@@ -1,5 +1,6 @@
 import { openDB } from "idb";
 import axios from "axios";
+import { API_KEY, BASE_URL } from "../config";
 
 
 interface Movie {
@@ -26,8 +27,6 @@ interface Series {
 const DB_NAME = "MovieAppDB";
 const SEARCH_STORE = "searchHistory";
 const FAV_STORE = "favourites";
-const API_KEY = "dfac1aa5cb807fcf17cb9a1914e1c132";
-const BASE_URL = "https://api.themoviedb.org/3";
 
 // Helper function to get the IndexedDB database instance
 async function getDB() {

@@ -5,6 +5,7 @@ import MovieCard from "../components/MovieCard";
 import Message from "../components/Message"; 
 import styles from "../styles/homestyles/home.module.css";
 import { getRecommendations } from "../utils/recommendation";
+import { API_KEY, BASE_URL } from "../config";
 
 interface Movie {
   id: number;
@@ -20,8 +21,7 @@ interface MovieWithCategories extends Movie {
   categories: ("all" | "top" | "latest" | "upcoming" | "recommended")[];
 }
 
-const API_KEY = "dfac1aa5cb807fcf17cb9a1914e1c132";
-const BASE_URL = "https://api.themoviedb.org/3";
+
 const DB_NAME = "MovieAppDB";
 const STORE_NAME = "favourites";
 const DB_VERSION = 3;

@@ -6,6 +6,7 @@ import MovieCard from "../components/MovieCard";
 import styles from "../styles/genrestyles/genrestyles.module.css";
 import { Movie } from "../types";
 import Message from "../components/Message";
+import { API_KEY, BASE_URL } from "../config";
 
 const DB_NAME = "MovieAppDB";
 const STORE_NAME = "favourites";
@@ -95,8 +96,7 @@ const Genres: React.FC = () => {
   const [sections, setSections] = useState<Record<string, PaginatedSection>>({});
   const [message, setMessage] = useState<string | null>(null);
 
-  const API_KEY = "dfac1aa5cb807fcf17cb9a1914e1c132";
-  const BASE_URL = "https://api.themoviedb.org/3";
+
 
   const handleToggleFavourite = async (movie: Movie) => {
     const sessionUser = sessionStorage.getItem("sessionUser");

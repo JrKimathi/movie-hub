@@ -4,7 +4,7 @@ import axios from 'axios';
 import Navbar from '../components/Navbar';
 import styles from '../styles/actordetails/actorDetails.module.css';
 import Message from '../components/Message';
-
+import { API_KEY, BASE_URL } from "../config";
 
 interface ActorDetails {
   id: number;
@@ -32,8 +32,7 @@ interface CombinedCredit {
   vote_average: number;
 }
 
-const API_KEY = "dfac1aa5cb807fcf17cb9a1914e1c132";
-const BASE_URL = "https://api.themoviedb.org/3";
+
 
 const DB_NAME = "AuthDB";
 const STORE_NAME = "favouriteCredits";

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import styles from '../styles/actorsstyles/actors.module.css';
+import { API_KEY, BASE_URL } from "../config";
 
 interface Actor {
   id: number;
@@ -11,8 +12,7 @@ interface Actor {
   popularity: number;
 }
 
-const API_KEY = "dfac1aa5cb807fcf17cb9a1914e1c132";
-const BASE_URL = "https://api.themoviedb.org/3";
+
 
 const ActorCard: React.FC<{ actor: Actor }> = ({ actor }) => {
   const navigate = useNavigate();
